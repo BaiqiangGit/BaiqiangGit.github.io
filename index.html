@@ -6,6 +6,10 @@
 
 <!1st ordered list>
 <ol>
+  <li><a href="https://unix.stackexchange.com/questions/362115/how-to-keep-a-python-script-running-when-i-close-putty"> keep script running remotely when ssh connection is lost </a></li> 
+  <p> nohup python train.py --batch_size 12 --n_cpu 12 >training_nohup.out& <br>
+  check output: tail -f training_nohup.out</p> 
+  
   <li>Conda save environment to yml </li>
   <p> conda update conda <br> 
   conda env export --no-builds > environment.yaml</p> 
