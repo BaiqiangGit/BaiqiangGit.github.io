@@ -2,58 +2,12 @@
 <html>
 <body>
 
-<h3> 1. Technical Issues</h3>
+<h3> 1. Ongoing</h3>
 
-<!1st ordered list>
-<ol>
-  
-  <li>pip install, OMac SX error: command 'gcc' failed with exit status 1 </li>
-  <p> export CC=clang ; export CXX=clang </p> 
-  
-  <li><a href="https://unix.stackexchange.com/questions/362115/how-to-keep-a-python-script-running-when-i-close-putty"> keep script running remotely when ssh connection is lost </a></li> 
-  <p> nohup python train.py --batch_size 12 --n_cpu 12 >training_nohup.out& <br>
-  check output by: tail -f training_nohup.out <br>
-  if want to kill the process, can read the pid from nvidia-smi, or using 'ps -ef | grep python' <br>
-  with the PID, do : kill -9 PID, or kill PID </p> 
-  
-  <li>Conda save environment to yml </li>
-  <p> conda update conda <br> 
-  conda env export > environment.yml <br>
-  conda env export --no-builds > environment.yaml</p> 
 
-  <li>Exported the env from macOS and tried to import on Linux</li> 
-  <p>Remove: <br> libcxxabi=4.0.1 <br>
-  libcxx=4.0.1</p> 
-
-  <p>Possible issue with pip: <br> pip uninstall setuptools <br> conda install -c anaconda setuptools</p> 
   
-  <li><a href="https://www.linux.com/tutorials/linux-101-check-disk-space-command/"> Linux: Check Disk Space </a></li> 
-  <p> df command  – Show the amount of disk space used and available on Linux file systems. 
-      <br> du command – Display the amount of disk space used by the specified files and for each subdirectory. 
-      <br> btrfs fi df /device/ – Show disk space usage information for a btrfs based mount point/file system. 
-  </p> 
-
-  <li> DLIB Issue #1: image not found </li> 
-  <p>Solution: <br> Install from source (10 mins)<br>
-  pip install 'git+https://github.com/davisking/dlib.git’</p>
-  
-  <li><a href="https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh/">  Remote Access to IPython Notebooks via SSH</a></li>
-  <p> On the remote machine, start the IPython notebooks server: <br>  ipython notebook --no-browser --port=8889. <br> 
-      <br> On the local machine, start an SSH tunnel: <br>  ssh -N -f -L localhost:8888:localhost:8889  baiqiang@turku.silo.ai . <br> 
-      <br> Now open your browser on the local machine and type in the address bar: <br> localhost:8888
-  </p> 
-  
-  <li><a href="https://github.com/mingyuliutw/UNIT/issues/56">  AttributeError: module 'tensorboard.summary._tf.summary' has no attribute 'FileWriter'</a></li>
-  <p> pip install tensorflow==1.15.0 </p> 
-  
-  <li><a href="https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/162">  OSError: image file is truncated (7 bytes not processed) #162
-</a></li>
-  <p> from PIL import ImageFile <br> ImageFile.LOAD_TRUNCATED_IMAGES = True </p> 
-  
-</ol> 
-
+<!########################################################2nd ordered list>
 <h3> 2. Deep Learning Resources</h3>
-
 <!2nd ordered list>
 <ol>
   <li><a href="https://github.com/eriklindernoren/PyTorch-YOLOv3/"> PyTorch YOLOv3 </a></li> 
@@ -401,7 +355,55 @@
 </ol>
  
 
+<!########################################################1st ordered list>
+<h3> 3. Technical Issues</h3>
+<!1st ordered list>
+<ol>
   
+  <li>pip install, OMac SX error: command 'gcc' failed with exit status 1 </li>
+  <p> export CC=clang ; export CXX=clang </p> 
+  
+  <li><a href="https://unix.stackexchange.com/questions/362115/how-to-keep-a-python-script-running-when-i-close-putty"> keep script running remotely when ssh connection is lost </a></li> 
+  <p> nohup python train.py --batch_size 12 --n_cpu 12 >training_nohup.out& <br>
+  check output by: tail -f training_nohup.out <br>
+  if want to kill the process, can read the pid from nvidia-smi, or using 'ps -ef | grep python' <br>
+  with the PID, do : kill -9 PID, or kill PID </p> 
+  
+  <li>Conda save environment to yml </li>
+  <p> conda update conda <br> 
+  conda env export > environment.yml <br>
+  conda env export --no-builds > environment.yaml</p> 
+
+  <li>Exported the env from macOS and tried to import on Linux</li> 
+  <p>Remove: <br> libcxxabi=4.0.1 <br>
+  libcxx=4.0.1</p> 
+
+  <p>Possible issue with pip: <br> pip uninstall setuptools <br> conda install -c anaconda setuptools</p> 
+  
+  <li><a href="https://www.linux.com/tutorials/linux-101-check-disk-space-command/"> Linux: Check Disk Space </a></li> 
+  <p> df command  – Show the amount of disk space used and available on Linux file systems. 
+      <br> du command – Display the amount of disk space used by the specified files and for each subdirectory. 
+      <br> btrfs fi df /device/ – Show disk space usage information for a btrfs based mount point/file system. 
+  </p> 
+
+  <li> DLIB Issue #1: image not found </li> 
+  <p>Solution: <br> Install from source (10 mins)<br>
+  pip install 'git+https://github.com/davisking/dlib.git’</p>
+  
+  <li><a href="https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh/">  Remote Access to IPython Notebooks via SSH</a></li>
+  <p> On the remote machine, start the IPython notebooks server: <br>  ipython notebook --no-browser --port=8889. <br> 
+      <br> On the local machine, start an SSH tunnel: <br>  ssh -N -f -L localhost:8888:localhost:8889  baiqiang@turku.silo.ai . <br> 
+      <br> Now open your browser on the local machine and type in the address bar: <br> localhost:8888
+  </p> 
+  
+  <li><a href="https://github.com/mingyuliutw/UNIT/issues/56">  AttributeError: module 'tensorboard.summary._tf.summary' has no attribute 'FileWriter'</a></li>
+  <p> pip install tensorflow==1.15.0 </p> 
+  
+  <li><a href="https://github.com/eriklindernoren/PyTorch-YOLOv3/issues/162">  OSError: image file is truncated (7 bytes not processed) #162
+</a></li>
+  <p> from PIL import ImageFile <br> ImageFile.LOAD_TRUNCATED_IMAGES = True </p> 
+  
+</ol>   
   
   
 </body>
