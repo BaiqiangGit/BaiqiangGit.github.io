@@ -481,8 +481,23 @@
   
   <li><a href="https://git-lfs.github.com/">  git large file handling package</a></li> 
   <p> brew install git-lfs, run git lfs install </p> 
+   
+  <li><a href="https://answers.opencv.org/question/189349/known-issue-with-gopro-movie-codec-stops-reading-after-26-frames/">  opencv only read first few frames of gopro mp4</a></li> 
+  <p> The problem is the audio track. Opencv has no decoder for audio, so need to remove audio <br>
+      can do by a gross way: forget the empty frame: <br>
+      <a href="https://stackoverflow.com/a/55644446">  reference </a><br>
+      auto expectedFrameCount = videoCapture.get(cv::CAP_PROP_FRAME_COUNT);<br>
+      for(auto frameIndex = 0; frameIndex < expectedFrameCount; frameIndex++) {<br>
+        videoCapture >> frame;<br>
+        if(frame.empty()) {<br>
+          frameIndex--;<br>
+          continue;<br>
+        }<br>
+        // Do useful things with the frame here...<br>
+      }<br>
+  </p> 
+   
 </ol>   
-  
   
 </body>
 </html>
