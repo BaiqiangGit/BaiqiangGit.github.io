@@ -562,7 +562,12 @@
 <h3> 3. Technical Issues</h3>
 <!1st ordered list>
 <ol>
+  <li> python list of list </li>
+  <p>  instantialize a list of empty list with different id: x = [[] for i in range(3)] # x[0], x[1], x[2] are different-</p>
+  <p>  instantialize a list of empty list with same id: x = [[]] * 3 # x[0], x[1], x[2] are same  </p>
    
+   x = [[] for i in range(3)]
+
   <li> batch/bulk png to jpg </li>
   <p> <a href="http://tutorialshares.com/batch-convert-png-jpg-mac-terminal/"> mkdir jpegs; sips -s format jpeg *.* --out jpegs  </p>
 
