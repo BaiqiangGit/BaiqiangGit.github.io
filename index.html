@@ -562,6 +562,16 @@
 <h3> 3. Technical Issues</h3>
 <!1st ordered list>
 <ol>
+   
+  <li> Python: create list of list </li>
+  <p> Correct way: llist = [[0 for _ in range(3)] for _ in range(4)] </p>
+  <p> Wrong way: llist = [ [0] * 3] ] * 4, rows of llist are same, updating one of them results updates of all rows</p>
+  <p> a = [[0] * 3] * 4</p>
+  <p> a[0][0] = 12</p>
+  <p> print(a)</p>
+  <p> Out: [[12, 0, 0], [12, 0, 0], [12, 0, 0], [12, 0, 0]]</p>         
+
+   
   <li> python list of list </li>
   <p>  instantialize a list of empty list with different id: x = [[] for i in range(3)] # x[0], x[1], x[2] are different-</p>
   <p>  instantialize a list of empty list with same id: x = [[]] * 3 # x[0], x[1], x[2] are same  </p>   
